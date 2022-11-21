@@ -14,7 +14,7 @@ def sendmsg():
     if request.method == 'POST':
         # input = request.form['input']
         print("hi")
-        call('notify-send hi', shell=True)
+        call('notify-send "Hi!"', shell=True)
         return 'success'
 
 if __name__ == '__main__':
