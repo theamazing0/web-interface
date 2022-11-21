@@ -1,12 +1,11 @@
-function sendmsg() {
-    const url = 'sendmsg';
-    const data = {please : "do action"};
+function openretroarch() {
+    const url = 'openretroarch';
 
     fetch(
         url,
         {
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
+            // body: JSON.stringify(data),
             method: "POST"
         }
     )

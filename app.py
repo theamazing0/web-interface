@@ -9,12 +9,12 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def index():
     return render_template('index.html')
 
-@app.route('/sendmsg', methods=['POST'])
+@app.route('/openretroarch', methods=['POST'])
 def sendmsg():
     if request.method == 'POST':
         # input = request.form['input']
-        print("hi")
-        call('notify-send "Hi!"', shell=True)
+        print("Opening Retroarch")
+        call('export DISPLAY=:0 && flatpak run org.libretro.RetroArch --fullscreen', shell=True)
         return 'success'
 
 if __name__ == '__main__':
